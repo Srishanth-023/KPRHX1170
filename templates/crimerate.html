@@ -18,10 +18,11 @@
       text-align: center;
     }
     .content {
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+        width: 90%;        /* span the full viewport */
+        margin: 2rem auto;
+        padding: 0 1rem;    /* you can reduce padding if needed */
     }
+
     h2 { margin-top: 2rem; color: #111; }
     table {
       width: 100%;
@@ -52,7 +53,6 @@
 <body>
 
   <header>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
     <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}" />
     {% include 'navbar.html' %}
     <h1>Crime Rate in India by State & District</h1>
@@ -62,7 +62,7 @@
     <h2>National Overview Map</h2>
     <div class="map-container">
       <!-- Example public embed of India map; replace with an interactive dashboard if available -->
-      <iframe src="https://www.mapsofindia.com/embed/india-crime-map.html"></iframe>
+      <iframe src="https://www.samacharjustclick.com/indias-crime-map-2024-the-top-10-most-and-least-crime-affected-states/"></iframe>
     </div>
 
     <h2>Crime Rate by State (Approx. %)</h2>
