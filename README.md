@@ -120,6 +120,7 @@ Pull requests are welcome! Please open an issue first to discuss proposed change
 ## 📧 Contact
 
 **Project Maintainers':** Santhosh I, Vinu Karthick D, Natarajan V, Deepak K M and Srishanth P M.
+
 **Email:** sandytamizhan2006@gmial.com, vinukarthick6@gmail.com, vnadarajan15@gmail.com, kmariandeepak@gamil.com and srishanth232007@gmail.com 
 
 
