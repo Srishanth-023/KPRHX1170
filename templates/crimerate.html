@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crime Rates in India</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #111;
+      color: #FFD700;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    .content {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    h2 { margin-top: 2rem; color: #111; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.75rem;
+      text-align: center;
+    }
+    th {
+      background: #111;
+      color: #fff;
+    }
+    .map-container {
+      width: 100%;
+      height: 500px;
+      margin-bottom: 2rem;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}" />
+    {% include 'navbar.html' %}
+    <h1>Crime Rate in India by State & District</h1>
+  </header>
+
+  <div class="content">
+    <h2>National Overview Map</h2>
+    <div class="map-container">
+      <!-- Example public embed of India map; replace with an interactive dashboard if available -->
+      <iframe src="https://www.mapsofindia.com/embed/india-crime-map.html"></iframe>
+    </div>
+
+    <h2>Crime Rate by State (Approx. %)</h2>
+    <table>
+      <tr><th>State</th><th>Crime Rate (%)</th></tr>
+      <tr><td>Maharashtra</td><td>2.1%</td></tr>
+      <tr><td>Delhi</td><td>5.8%</td></tr>
+      <tr><td>West Bengal</td><td>3.4%</td></tr>
+      <tr><td>Bihar</td><td>1.8%</td></tr>
+      <tr><td>Tamil Nadu</td><td>2.5%</td></tr>
+      <tr><td>Uttar Pradesh</td><td>2.9%</td></tr>
+    </table>
+
+    <h2>Crime Rate by District in Maharashtra</h2>
+    <table>
+      <tr><th>District</th><th>Crime Rate (%)</th></tr>
+      <tr><td>Mumbai</td><td>6.2%</td></tr>
+      <tr><td>Pune</td><td>3.1%</td></tr>
+      <tr><td>Nagpur</td><td>2.4%</td></tr>
+      <tr><td>Nashik</td><td>2.8%</td></tr>
+      <tr><td>Thane</td><td>4.0%</td></tr>
+    </table>
+  </div>
+
+  {% include 'footer.html' %}
+
+</body>
+</html>

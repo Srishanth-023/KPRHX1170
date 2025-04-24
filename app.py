@@ -14,6 +14,10 @@ def contact():
 def live_monitoring():
     return render_template("live.html")
 
+@app.route('/crimerate')
+def crimerate():
+    return render_template("crimerate.html")
+
 @app.route('/welcome')
 def welcome():
     return render_template("welcome.html")
