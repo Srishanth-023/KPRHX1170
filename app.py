@@ -18,6 +18,10 @@ def live_monitoring():
 def crimerate():
     return render_template("crimerate.html")
 
+@app.route('/criminalrecords')
+def criminalrecords():
+    return render_template("criminalrecords.html")
+
 @app.route('/welcome')
 def welcome():
     return render_template("welcome.html")

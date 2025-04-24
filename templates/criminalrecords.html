@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}" />
+
+  {% include 'navbar.html' %}
+  <title>Recent Criminal Records – Tamil Nadu</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      color: #111;
+      margin-bottom: 1rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.75rem;
+      text-align: left;
+    }
+    th {
+      background: #111;
+      color: #fff;
+    }
+    tr:nth-child(even) {
+      background: #fafafa;
+    }
+    tr:hover {
+      background: #f1f1f1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Recent Criminal Records – Tamil Nadu</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Crime</th>
+        <th>Location</th>
+        <th>Date of Arrest</th>
+        <th>Previous Offenses</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>S. Ramesh</td><td>32</td><td>Mobile Snatching</td><td>Chennai</td><td>2025-04-18</td><td>None</td></tr>
+      <tr><td>2</td><td>P. Kavitha</td><td>27</td><td>Pickpocketing</td><td>Madurai</td><td>2025-04-20</td><td>Shoplifting (2024)</td></tr>
+      <tr><td>3</td><td>K. Arjun</td><td>24</td><td>Drug Possession</td><td>Coimbatore</td><td>2025-04-19</td><td>Public Intoxication (2023)</td></tr>
+      <tr><td>4</td><td>M. Priya</td><td>29</td><td>Assault</td><td>Tiruchirappalli</td><td>2025-04-17</td><td>None</td></tr>
+      <tr><td>5</td><td>R. Kumar</td><td>35</td><td>Burglary</td><td>Salem</td><td>2025-04-15</td><td>Theft (2022)</td></tr>
+      <tr><td>6</td><td>L. Sangeetha</td><td>22</td><td>Shoplifting</td><td>Vellore</td><td>2025-04-16</td><td>None</td></tr>
+      <tr><td>7</td><td>D. Aravind</td><td>31</td><td>Car Theft</td><td>Chennai</td><td>2025-04-14</td><td>Vehicle Tampering (2023)</td></tr>
+      <tr><td>8</td><td>S. Meena</td><td>26</td><td>Credit Card Fraud</td><td>Madurai</td><td>2025-04-13</td><td>None</td></tr>
+      <tr><td>9</td><td>V. Raghav</td><td>28</td><td>Cyber Hacking</td><td>Coimbatore</td><td>2025-04-12</td><td>Identity Theft (2024)</td></tr>
+      <tr><td>10</td><td>N. Deepa</td><td>30</td><td>Domestic Violence</td><td>Tirunelveli</td><td>2025-04-11</td><td>None</td></tr>
+      <tr><td>11</td><td>K. Sanjay</td><td>33</td><td>Illegal Gambling</td><td>Salem</td><td>2025-04-10</td><td>None</td></tr>
+      <tr><td>12</td><td>P. Lakshmi</td><td>25</td><td>Vandalism</td><td>Vellore</td><td>2025-04-09</td><td>Property Damage (2023)</td></tr>
+      <tr><td>13</td><td>S. Prakash</td><td>29</td><td>Arson</td><td>Chennai</td><td>2025-04-08</td><td>None</td></tr>
+      <tr><td>14</td><td>R. Divya</td><td>23</td><td>Public Disturbance</td><td>Madurai</td><td>2025-04-07</td><td>None</td></tr>
+      <tr><td>15</td><td>G. Karthik</td><td>34</td><td>Robbery</td><td>Coimbatore</td><td>2025-04-06</td><td>Armed Robbery (2022)</td></tr>
+      <tr><td>16</td><td>M. Anjali</td><td>27</td><td>Human Trafficking</td><td>Tiruchirappalli</td><td>2025-04-05</td><td>None</td></tr>
+      <tr><td>17</td><td>D. Hari</td><td>31</td><td>Extortion</td><td>Salem</td><td>2025-04-04</td><td>None</td></tr>
+      <tr><td>18</td><td>S. Nivedha</td><td>24</td><td>Credit Card Fraud</td><td>Vellore</td><td>2025-04-03</td><td>None</td></tr>
+      <tr><td>19</td><td>V. Rajesh</td><td>28</td><td>Vehicle Theft</td><td>Chennai</td><td>2025-04-02</td><td>Car Theft (2023)</td></tr>
+      <tr><td>20</td><td>K. Srilatha</td><td>32</td><td>Drug Trafficking</td><td>Madurai</td><td>2025-04-01</td><td>Possession (2024)</td></tr>
+    </tbody>
+  </table>
+
+  {% include 'footer.html' %}
+  
+</body>
+</html>
