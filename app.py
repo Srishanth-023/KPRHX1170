@@ -14,6 +14,10 @@ def contact():
 def live_monitoring():
     return render_template("live.html")
 
+@app.route('/welcome')
+def welcome():
+    return render_template("welcome.html")
+
 
 
 if __name__ == '__main__':
