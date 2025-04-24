@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Smart Policing India</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}" />
+
+</head>
+<body class="home-page">
+    <header>
+        <nav class="navbar">
+            <div class="logo">👮‍♂️ Smart Policing India</div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/live">Live Monitoring</a></li>
+                <li><a href="#">Insert-Video</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>SMART POLICING INDIA</h1>
+        <p>
+            Transforming Law Enforcement with <span class="highlight">AI</span>, Facial Recognition, and Real-time Surveillance
+        </p>
+        <div class="buttons">
+            <a href="#" class="btn">Get Started</a>
+            <a href="#" class="btn secondary">Live View</a>
+        </div>
+    </section>
+
+    <div class="hero-bubbles">
+        <a href="/" class="bubble" data-label="Home">🏠</a>
+        <a href="/live" class="bubble" data-label="Live">📹</a>
+        <a href="#" class="bubble" data-label="Insert-Video">🎞️</a>
+        <a href="/contact" class="bubble" data-label="Contact">✉️</a>
+    </div>
+      
+    
+
+    {% include 'footer.html' %}
+
+</body>
+</html>

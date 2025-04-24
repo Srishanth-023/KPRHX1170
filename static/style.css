@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #1a237e, #800000); /* Navy to Maroon */
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 60px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #FFD700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FFD700;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-top: 20vh;
+    padding: 0 30px;
+}
+
+.hero {
+    position: relative;
+    /* existing styles… */
+  }
+  
+  .hero-bubbles {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+  }
+  
+  .bubble {
+    position: absolute;
+    width: 120px;      /* adjust per your nth-child rules */
+    height: 120px;
+    
+    /* Transparent base with slight tint */
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    
+    /* Outer 3D shading */
+    box-shadow: 
+      /* highlight top-left */
+      -4px -4px 8px rgba(255, 255, 255, 0.2),
+      /* deep shadow bottom-right */
+      6px 6px 12px rgba(0, 0, 0, 0.5),
+      /* inset shadow for curvature */
+      inset 2px 2px 4px rgba(0, 0, 0, 0.3);
+    
+    /* Frosted‑glass blur */
+    backdrop-filter: blur(6px);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Icon style */
+    font-size: 2rem;
+    color: #FFD700;
+    
+    text-decoration: none;
+    pointer-events: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .bubble:hover {
+    transform: scale(1.15);
+  }
+  
+  
+  
+  /* Top two bubbles (1 and 2) */
+  .bubble:nth-child(1),
+  .bubble:nth-child(2) {
+    width: 150px;
+    height: 150px;
+  }
+  
+  /* Bottom two bubbles (3 and 4) */
+  .bubble:nth-child(3),
+  .bubble:nth-child(4) {
+    width: 200px;
+    height: 200px;
+  }
+  
+  /* Position in four corners */
+  .bubble:nth-child(1) { top: 25%;  left: 12%;  } /* Home */
+  .bubble:nth-child(2) { top: 25%;  right: 12%; } /* Live */
+  .bubble:nth-child(3) { bottom: 20%; left: 22%; } /* Insert-Video */
+  .bubble:nth-child(4) { bottom: 20%; right: 22%; } /* Contact */
+  
+  /* Optional: show label on hover */
+  .bubble::after {
+    content: attr(data-label);
+    position: absolute;
+    bottom: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 2px 6px;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+  }
+  .bubble:hover::after {
+    opacity: 1;
+  }
+  
+
+.hero h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: #f2e6c9;
+    letter-spacing: 1.5px;
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #e0e0e0;
+}
+
+.highlight {
+    color: #FFD700;
+    font-weight: bold;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: #FFD700;
+    color: #1a1a1a;
+    padding: 12px 24px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #f2c400;
+}
+
+.btn.secondary {
+    background-color: transparent;
+    border: 2px solid #FFD700;
+    color: #FFD700;
+}
+
+.btn.secondary:hover {
+    background-color: #FFD700;
+    color: #1a1a1a;
+}
+
+
+.team-section {
+    padding: 80px 20px;
+    background-color: #10121b;
+    color: #ffffff;
+    text-align: center;
+}
+
+.team-section h1 {
+    font-size: 2.5rem;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.team-subtitle {
+    color: #cccccc;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.team-card {
+    background-color: #1c1e2c;
+    padding: 30px;
+    width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-30px);
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    background-color: #FFD700;
+    border-radius: 50%;
+}
+
+.team-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.role {
+    font-size: 0.95rem;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.desc {
+    font-size: 0.85rem;
+    color: #bbbbbb;
+}
+
+.avatar-img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px; /* Optional: slightly rounded corners */
+    margin-bottom: 20px;
+    border: 4px solid #FFD700;
+}
+
+
+
+

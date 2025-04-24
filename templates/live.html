@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Monitoring - Smart Policing India</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <style>
+    .video-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 60px 0;
+        background-color: #10121b;
+        min-height: 100vh;
+    }
+    video {
+        width: 720px;
+        height: 540px;
+        border: 4px solid #FFD700;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+        transform: scaleX(-1); /* ← Flip horizontally */
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">👮‍♂️ Smart Policing India</div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/live">Live Monitoring</a></li>
+        <li><a href="#">Smart Video</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="video-container">
+    <video id="cameraFeed" autoplay></video>
+  </section>
+
+  <script>
+    const video = document.getElementById('cameraFeed');
+
+    navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+      .then(stream => {
+        video.srcObject = stream;
+      })
+      .catch(err => {
+        alert("Could not access your camera. Please allow permissions.");
+        console.error("Camera error:", err);
+      });
+  </script>
+</body>
+</html>

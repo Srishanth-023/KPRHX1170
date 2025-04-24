@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Team – Smart Policing India</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">👮‍♂️ Smart Policing India</div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/live">Live Monitoring</a></li>
+        <li><a href="#">Smart Video</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="team-section">
+    <h1>Meet Our Team</h1>
+    <p class="team-subtitle">The minds behind the Smart Policing system</p>
+  
+    <div class="team-grid">
+  
+      <div class="team-card">
+        <img src="{{ url_for('static', filename='images/srishanth.jpg') }}" alt="Amit Kumar" class="avatar-img">
+        <h3>Sri Shanth</h3>
+        <p class="role">AI/DS Student</p>
+        <p class="desc">Specialist in computer vision, model optimization, and real-time inference systems.</p>
+      </div>
+  
+      <div class="team-card">
+        <img src="{{ url_for('static', filename='images/vinukarthick.png') }}" alt="Priya Singh" class="avatar-img">
+        <h3>Vinu Karthick</h3>
+        <p class="role">AI/DS Student</p>
+        <p class="desc">Focused on facial recognition, identity matching, and deep learning model deployment.</p>
+      </div>
+  
+      <div class="team-card">
+        <img src="{{ url_for('static', filename='images/santhosh.jpg') }}" alt="Rahul Mehra" class="avatar-img">
+        <h3>Santhosh</h3>
+        <p class="role">AI/DS Student</p>
+        <p class="desc">Expert in surveillance pipeline integration and backend services using Flask and FastAPI.</p>
+      </div>
+  
+      <div class="team-card">
+        <img src="{{ url_for('static', filename='images/nattu.png') }}" alt="Sneha Roy" class="avatar-img">
+        <h3>Natrajan</h3>
+        <p class="role">AI/DS Student</p>
+        <p class="desc">Leads smart alert systems, data processing, and dashboard integration with UI/UX expertise.</p>
+      </div>
+  
+      <div class="team-card">
+        <img src="{{ url_for('static', filename='images/deepak.jpg') }}" alt="Karan Patel" class="avatar-img">
+        <h3>Deepak</h3>
+        <p class="role">CSE Student</p>
+        <p class="desc">Handles crime graph modeling and predictive analytics using NetworkX and Neo4j.</p>
+      </div>
+  
+    </div>
+  </section>
+  
+  {% include 'footer.html' %}
+
+</body>
+</html>
