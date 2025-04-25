@@ -59,15 +59,14 @@
 
 <body>
     <div class="container">
-        <h1>Object Detection System</h1>
-        <button class="start-button" onclick="start()">Start Detection</button>
-        <img id="video" src="" />
+        <h1>Face Recognition System</h1>
+        <button class="start-button" onclick="startRecognition()">Start Recognition</button>
+        <img id="video" src="" alt="Video Stream" />
     </div>
 
     <script>
-        function start() {
-            // ✅ updated to match Flask route for YOLO detection
-            document.getElementById("video").src = "/video_feed_yolo";
+        function startRecognition() {
+            document.getElementById("video").src = "/video_feed_face";
         }
     </script>
 
