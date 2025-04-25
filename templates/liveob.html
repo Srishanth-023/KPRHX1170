@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Policing India</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}" />
+    {% include 'navbar.html' %}
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0f111a;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 40px;
+            font-size: 36px;
+            color: #ffffff;
+        }
+
+        #video {
+            border: 5px solid #f1c40f;
+            border-radius: 15px;
+            margin-top: 40px;
+            box-shadow: 0 0 20px #f1c40f;
+            width: 640px;
+            height: 480px;
+            transform: scaleX(-1);
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-bottom: 50px;
+        }
+
+        .start-button {
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: #f1c40f;
+            color: black;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .start-button:hover {
+            background-color: #d4ac0d;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Face Detection System</h1>
+        <button class="start-button" onclick="start()">Start Detection</button>
+        <img id="video" src="" />
+    </div>
+
+    <script>
+        function start() {
+            document.getElementById("video").src = "/video_feed";
+        }
+    </script>
+
+    {% include 'footer.html' %}
+</body>
+</html>
