@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}" />
+
+  
+  {% include 'navbar.html' %}
+
+  <title>Vehicle Crime Records – Tamil Nadu</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      color: #111;
+      margin-bottom: 1.5rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.75rem;
+      text-align: left;
+    }
+    th {
+      background: #111;
+      color: #fff;
+    }
+    tr:nth-child(even) {
+      background: #f9f9f9;
+    }
+    tr:hover {
+      background: #f1f1f1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Vehicle Crime Records – Tamil Nadu (Last 30 Days)</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Number Plate</th>
+        <th>Owner Name</th>
+        <th>Vehicle Type</th>
+        <th>Location</th>
+        <th>Rule Broken</th>
+        <th>Date Caught</th>
+        <th>Previous Offenses</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>TN09AB1234</td><td>Rajesh Kumar</td><td>Bike</td><td>Chennai</td><td>No Helmet</td><td>2025-04-19</td><td>Speeding (2023)</td></tr>
+      <tr><td>2</td><td>TN01CD5678</td><td>Priya S</td><td>Car</td><td>Madurai</td><td>Red Light Jump</td><td>2025-04-18</td><td>None</td></tr>
+      <tr><td>3</td><td>TN22XY9012</td><td>Aravind M</td><td>Auto</td><td>Coimbatore</td><td>Overloading</td><td>2025-04-17</td><td>None</td></tr>
+      <tr><td>4</td><td>TN10KL3456</td><td>Sneha R</td><td>Car</td><td>Salem</td><td>Drunk Driving</td><td>2025-04-16</td><td>None</td></tr>
+      <tr><td>5</td><td>TN05MN7890</td><td>Karan V</td><td>Bike</td><td>Tirunelveli</td><td>Overspeeding</td><td>2025-04-15</td><td>Signal Violation (2022)</td></tr>
+      <tr><td>6</td><td>TN14GH1234</td><td>Deepa J</td><td>Car</td><td>Vellore</td><td>Wrong Parking</td><td>2025-04-14</td><td>None</td></tr>
+      <tr><td>7</td><td>TN33QR5678</td><td>Naveen K</td><td>Bike</td><td>Chennai</td><td>Triple Riding</td><td>2025-04-13</td><td>Helmet Violation (2023)</td></tr>
+      <tr><td>8</td><td>TN11LM9012</td><td>Sandhya T</td><td>Car</td><td>Trichy</td><td>No Seatbelt</td><td>2025-04-12</td><td>None</td></tr>
+      <tr><td>9</td><td>TN19UV3456</td><td>Hari P</td><td>Bike</td><td>Erode</td><td>Driving Without License</td><td>2025-04-11</td><td>None</td></tr>
+      <tr><td>10</td><td>TN02WX7890</td><td>Kavitha R</td><td>Car</td><td>Madurai</td><td>Signal Violation</td><td>2025-04-10</td><td>None</td></tr>
+      <tr><td>11</td><td>TN21JK1234</td><td>Sundar A</td><td>Bike</td><td>Chennai</td><td>No Helmet</td><td>2025-04-09</td><td>Overspeeding (2024)</td></tr>
+      <tr><td>12</td><td>TN16BC5678</td><td>Meena S</td><td>Auto</td><td>Salem</td><td>Unauthorized Modification</td><td>2025-04-08</td><td>None</td></tr>
+      <tr><td>13</td><td>TN07XY9012</td><td>Vikram M</td><td>Car</td><td>Vellore</td><td>Drunk Driving</td><td>2025-04-07</td><td>None</td></tr>
+      <tr><td>14</td><td>TN12KL3456</td><td>Anitha D</td><td>Bike</td><td>Madurai</td><td>No License</td><td>2025-04-06</td><td>Helmet Violation (2023)</td></tr>
+      <tr><td>15</td><td>TN03MN7890</td><td>Prakash T</td><td>Car</td><td>Chennai</td><td>Parking Violation</td><td>2025-04-05</td><td>None</td></tr>
+      <tr><td>16</td><td>TN08GH1234</td><td>Lavanya R</td><td>Bike</td><td>Coimbatore</td><td>Overtaking on Curve</td><td>2025-04-04</td><td>None</td></tr>
+      <tr><td>17</td><td>TN18QR5678</td><td>Ravi P</td><td>Car</td><td>Tirunelveli</td><td>Fake Number Plate</td><td>2025-04-03</td><td>Forgery Case (2023)</td></tr>
+      <tr><td>18</td><td>TN04LM9012</td><td>Swetha M</td><td>Bike</td><td>Trichy</td><td>Signal Violation</td><td>2025-04-02</td><td>None</td></tr>
+      <tr><td>19</td><td>TN06UV3456</td><td>Karthik B</td><td>Auto</td><td>Salem</td><td>Driving on Footpath</td><td>2025-04-01</td><td>None</td></tr>
+      <tr><td>20</td><td>TN13WX7890</td><td>Saranya G</td><td>Car</td><td>Chennai</td><td>Reckless Driving</td><td>2025-03-31</td><td>None</td></tr>
+    </tbody>
+  </table>
+
+  {% include 'footer.html' %}
+
+</body>
+</html>
